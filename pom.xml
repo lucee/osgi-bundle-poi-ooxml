@@ -121,8 +121,8 @@
             <Export-Package>*</Export-Package>
             <Require-Bundle>org.lucee.poi;bundle-version=3.15.0,org.lucee.poi.ooxml.schemas;bundle-version=3.15.0,org.lucee.curvesapi;bundle-version=1.04.0</Require-Bundle>
             <!-- <Require-Bundle-Fragment></Require-Bundle-Fragment> -->
-            <!-- <Import-Package>*</Import-Package> -->
-            <!-- <DynamicImport-Package>*</DynamicImport-Package> -->
+            <Import-Package>!javax.xml.crypto,!javax.xml.crypto.dom,!javax.xml.crypto.dsig,!javax.xml.crypto.dsig.dom,!javax.xml.crypto.dsig.keyinfo,!javax.xml.crypto.dsig.spec,*</Import-Package>
+            <DynamicImport-Package>javax.xml.crypto,javax.xml.crypto.dom,javax.xml.crypto.dsig,javax.xml.crypto.dsig.dom,javax.xml.crypto.dsig.keyinfo,javax.xml.crypto.dsig.spec</DynamicImport-Package>
             <!-- <Fragment-Host></Fragment-Host> -->
           </instructions>
         </configuration>

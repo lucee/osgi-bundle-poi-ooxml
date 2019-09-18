@@ -2,11 +2,11 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.lucee</groupId>
   <artifactId>poi-ooxml</artifactId>
-  <version>3.15.0</version>
-  <name>poi-ooxml</name>
+  <version>4.1.0</version>
+  <name>Apache POI OOXML</name>
   <packaging>bundle</packaging>
 
-  <description>OSGi Version of poi-ooxml</description>
+  <description>OSGi Version of Apache POI OOXML</description>
   <url>http://maven.lucee.org/poi-ooxml/</url>
 
   <!-- same license as the original jar -->
@@ -95,7 +95,7 @@
                  <artifactItem>
                    <groupId>org.apache.poi</groupId>
                     <artifactId>poi-ooxml</artifactId>
-                    <version>3.15</version>
+                    <version>4.1.0</version>
                    <type>jar</type>
                    <overWrite>false</overWrite>
                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
@@ -115,14 +115,14 @@
         <configuration>
           <unpackBundle>true</unpackBundle>
           <instructions>
-            <Bundle-Name>org.lucee.poi.ooxml</Bundle-Name>
-            <Bundle-SymbolicName>org.lucee.poi.ooxml</Bundle-SymbolicName>
+            <Bundle-Name>org.lucee.poi-ooxml</Bundle-Name>
+            <Bundle-SymbolicName>org.lucee.poi-ooxml</Bundle-SymbolicName>
             <Bundle-Description>OSGI version of jar ${project.name}</Bundle-Description>
-            <Export-Package>*</Export-Package>
-            <Require-Bundle>org.lucee.poi;bundle-version=3.15.0,org.lucee.poi.ooxml.schemas;bundle-version=3.15.0,org.lucee.curvesapi;bundle-version=1.04.0</Require-Bundle>
+            <Export-Package>*,META-INF.services.*</Export-Package>
+            <Require-Bundle>org.lucee.poi;bundle-version=4.1.0</Require-Bundle>
             <!-- <Require-Bundle-Fragment></Require-Bundle-Fragment> -->
-            <Import-Package>!javax.xml.crypto,!javax.xml.crypto.dom,!javax.xml.crypto.dsig,!javax.xml.crypto.dsig.dom,!javax.xml.crypto.dsig.keyinfo,!javax.xml.crypto.dsig.spec,!junit.framework,*</Import-Package>
-            <DynamicImport-Package>javax.xml.crypto,javax.xml.crypto.dom,javax.xml.crypto.dsig,javax.xml.crypto.dsig.dom,javax.xml.crypto.dsig.keyinfo,javax.xml.crypto.dsig.spec,junit.framework</DynamicImport-Package>
+            <Import-Package>!com.graphbuilder.curve,!com.graphbuilder.geom,!javax.xml.crypto,!javax.xml.crypto.dom,!javax.xml.crypto.dsig,!javax.xml.crypto.dsig.dom,!javax.xml.crypto.dsig.keyinfo,!javax.xml.crypto.dsig.spec,!org.apache.batik.anim.dom,!org.apache.batik.bridge,!org.apache.batik.ext.awt,!org.apache.batik.ext.awt.image.renderable,!org.apache.batik.gvt,!org.apache.batik.util,!org.apache.jcp.xml.dsig.internal.dom,!org.apache.xml.security,!org.apache.xml.security.c14n,!org.apache.xml.security.signature,!org.apache.xml.security.utils,!org.bouncycastle.cert,!org.bouncycastle.cert.jcajce,!org.bouncycastle.cert.ocsp,!org.bouncycastle.cms.bc,!org.bouncycastle.operator,!org.bouncycastle.operator.bc,*</Import-Package>
+            <DynamicImport-Package>com.graphbuilder.curve,com.graphbuilder.geom,javax.xml.crypto,javax.xml.crypto.dom,javax.xml.crypto.dsig,javax.xml.crypto.dsig.dom,javax.xml.crypto.dsig.keyinfo,javax.xml.crypto.dsig.spec,org.apache.batik.anim.dom,org.apache.batik.bridge,org.apache.batik.ext.awt,org.apache.batik.ext.awt.image.renderable,org.apache.batik.gvt,org.apache.batik.util,org.apache.jcp.xml.dsig.internal.dom,org.apache.xml.security,org.apache.xml.security.c14n,org.apache.xml.security.signature,org.apache.xml.security.utils,org.bouncycastle.cert,org.bouncycastle.cert.jcajce,org.bouncycastle.cert.ocsp,org.bouncycastle.cms.bc,org.bouncycastle.operator,org.bouncycastle.operator.bc</DynamicImport-Package>
             <!-- <Fragment-Host></Fragment-Host> -->
           </instructions>
         </configuration>
@@ -139,7 +139,7 @@
     <url>https://github.com/lucee/osgi-bundle-poi-ooxml</url>
     <connection>scm:git:git://github.com/lucee/osgi-bundle-poi-ooxml.git</connection>
     <developerConnection>scm:git:git@github.com:lucee/osgi-bundle-poi-ooxml.git</developerConnection>
-    <tag>poi-ooxml OSGi library</tag>
+    <tag>Apache POI OOXML OSGi library</tag>
   </scm>
 
   <distributionManagement>
